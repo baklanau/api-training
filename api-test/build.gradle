@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+//group 'by'
+//version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    restAssuredVersion = '3.3.0'
+    jacksonDataVersion = '2.9.8'
+    testNGVersion = '6.11'
+}
+
+dependencies {
+    compile "io.rest-assured:rest-assured:$restAssuredVersion"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonDataVersion"
+
+    testCompile "org.testng:testng:$testNGVersion"
+}
